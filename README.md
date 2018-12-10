@@ -1,2 +1,4 @@
 # chdss
-day2 version control, data analysis tutorial
+day2 (11 December 2018): version control & data analysis tutorial
+
+ - project description

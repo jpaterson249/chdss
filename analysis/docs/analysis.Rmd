@@ -1,0 +1,41 @@
+---
+title: "Exploration and Analysis of Data"
+author: "Julia Paterson"
+date: "11 December 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Starting up and initial exploration
+First we want to load the libraries we will need to use:
+``` {r packageload, message=FALSE}
+library(here)
+library(tidyverse) 
+library(skimr)
+library(lsr)
+```
+
+Next we want to read in the data from the frames_ex2.csv file:
+``` {r dataimport}
+loc <- here("analysis","data","frames_ex2.csv")
+frames <- read_csv(file = loc)
+```
+
+The data set has been imported as a tibble. Each row in the data set is
+a single response, and each column is a variable:
+```{r printframes}
+frames
+```
+
+Another nice way to view the data is using `glimpse()` function:
+```{r glimpseframes}
+glimpse(frames)
+```
+
+We can use the `skim()` function to get a simple overview of each variable:
+```{r skimframes}
+skim(frames)
+```
